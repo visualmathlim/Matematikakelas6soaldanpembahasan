@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paket 2 - Prediksi Soal Dasar UTS Kelas 6 | VisualMath.Lim</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Fira+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
+:root{--navy:#022050;--cy:#00d6d8;--ye:#ffd300;--bg:#f2f8fc;--ink:#12243f;--ok:#14935a;--bad:#d1384a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Nunito,system-ui,sans-serif}
+header{position:sticky;top:0;z-index:20;background:var(--navy);border-bottom:4px solid var(--ye)}
+.hd{max-width:960px;margin:auto;padding:8px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hd img{height:58px;width:58px;border-radius:50%}
+.brand{flex:1;min-width:210px;color:#fff;font:700 clamp(15px,2.5vw,20px)/1.25 'Fira Sans',sans-serif}
+.brand b{color:var(--cy)}.brand small{display:block;color:var(--ye);font-size:12.5px;letter-spacing:.4px}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid #fff3;transition:.2s}
+nav a:hover,nav a:focus-visible{background:var(--cy);color:var(--navy);border-color:var(--cy);outline:none}
+nav a.on{background:var(--ye);color:var(--navy);border-color:var(--ye)}
+main{max-width:960px;margin:auto;padding:20px 16px}
+.hero{background:var(--navy);color:#fff;border-radius:18px;padding:26px;border-bottom:6px solid var(--ye);margin-bottom:16px}
+.hero h1{margin:0 0 6px;font:700 clamp(24px,4vw,36px)/1.15 'Fira Sans';color:var(--cy)}.hero p{margin:0;color:#dbe7ff}
+.bar{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:10px 14px;margin-bottom:10px;font-weight:800}
+.nv{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0 4px}
+.nv a{min-width:36px;text-align:center;padding:2px 8px;border-radius:8px;background:#fff;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font:700 14px 'Fira Sans'}
+.nv a:hover{background:var(--cy)}.nv a.dn{background:var(--ok);border-color:var(--ok);color:#fff}
+h2{font:700 25px 'Fira Sans';color:var(--navy);border-bottom:4px solid var(--cy);padding-bottom:6px;margin:26px 0 8px}
+.q{background:#fff;border:2px solid var(--navy);border-radius:14px;padding:16px;margin:16px 0}
+.q h4{margin:0 0 6px;font:700 17px 'Fira Sans'}
+.hots{display:inline-block;background:var(--ye);color:var(--navy);border-radius:999px;padding:0 12px;font:700 13px 'Fira Sans';margin-left:6px}
+.fig{margin:10px 0;max-width:430px;overflow-x:auto}.fig svg{width:100%;height:auto}
+.tb{border-collapse:collapse;font-size:14px;text-align:center}.tb th{background:#e3fbfb;border:1px solid #333;padding:4px 8px}.tb td{border:1px solid #333;padding:6px 8px;font-size:20px;min-width:34px}
+.o{display:flex;gap:10px;padding:8px 12px;margin:6px 0;border:2px solid #cfd9e8;border-radius:10px;cursor:pointer}
+.o:hover{border-color:var(--cy)}.o input{margin-top:9px;accent-color:var(--navy)}
+.o.ok{border-color:var(--ok);background:#e4f7ee}.o.no{border-color:var(--bad);background:#fdecef}
+button{font:800 15px Nunito;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;background:var(--cy);color:var(--navy);margin:2px 2px 2px 0}
+button:hover,button:focus-visible{background:var(--ye);outline:none}
+button.alt{background:var(--navy);color:#fff}button.alt:hover{background:var(--ye);color:var(--navy)}
+.res{font-weight:800;margin:6px 0}
+.pn{display:none;margin-top:10px;border-left:6px solid var(--ye);background:#fff9d6;border-radius:0 12px 12px 0;padding:10px 14px}
+.pn.fast{border-color:var(--cy);background:#e3fbfb}.pn.show{display:block}
+.pn ul{margin:6px 0 0;padding-left:20px}
+.st{list-style:none;counter-reset:s;padding:0;margin:8px 0 0}
+.st>li{counter-increment:s;position:relative;padding:8px 10px 8px 52px;margin:8px 0;background:#fff;border:1px solid #cfe3f3;border-radius:12px}
+.st>li::before{content:counter(s);position:absolute;left:11px;top:9px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--ye);font:700 16px/30px 'Fira Sans';text-align:center}
+.st .katex-display{margin:.35em 0;text-align:left;overflow-x:auto;overflow-y:hidden}
+footer{background:var(--navy);color:#dbe7ff;text-align:center;padding:16px;border-top:4px solid var(--ye)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.tbw{overflow-x:auto;margin:8px 0}.dt{border-collapse:collapse;font-size:15px}.dt th{background:#e3fbfb}.dt th,.dt td{border:1px solid #333;padding:5px 12px;text-align:left}.nt{border-left:6px solid var(--bad);background:#fdecef;border-radius:0 10px 10px 0;padding:8px 12px;margin:8px 0;font-size:16px}
+</style></head><body>
+<header><div class="hd"><img src="logo.png" alt="Logo VisualMath.Lim">
+<div class="brand">VisualMath.<b>Lim</b> - Ruang Belajar Kelas 6<small>BIMBINGAN BELAJAR - MATH MASTERY</small></div>
+<nav><a href="index.html">Home</a><a href="paket-2.html" class="on">Paket 2</a></nav></div></header>
+<main>
+<div class="hero"><h1>Prediksi Soal Dasar UTS Matematika Kelas 6</h1><p>Perkalian dan pembagian pecahan, bilangan desimal, serta rasio. Pilih jawaban, tekan <b>Periksa</b>, lalu pelajari <b>cara cepat</b> dan <b>cara lengkap</b> langkah demi langkah.</p></div>
+<div class="bar">Skor: <span id="sk">0</span> dari 30 soal</div>
+<div class="nv" id="n1"></div><div id="pg"></div>
+</main>
+<footer>&copy; VisualMath.Lim &bull; Bimbingan Belajar &bull; Math Mastery</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+const R=String.raw,GR='#5fcfa8';
+const gcd=(a,b)=>b?gcd(b,a%b):a;
+const P=s=>{const m=s.split(' '),fr=m[m.length-1],[n,d]=fr.includes('/')?fr.split('/').map(Number):[+fr,1],w=m.length==2?+m[0]:0;return{n:w*d+n,d,mixed:m.length==2}};
+const sim=f=>{const g=gcd(f.n,f.d);return{n:f.n/g,d:f.d/g}};
+const T=f=>f.d==1?`${f.n}`:`\\frac{${f.n}}{${f.d}}`,T1=f=>`\\frac{${f.n}}{${f.d}}`;
+const M=f=>f.d>1&&f.n>f.d?`${Math.floor(f.n/f.d)}\\tfrac{${f.n%f.d}}{${f.d}}`:T(f);
+const D=f=>f.mixed?M(f):T(f),mx=r=>({...r,mixed:r.d>1&&r.n>r.d});
+const F=s=>`$${D(P(s))}$`,O=(...a)=>a.map(s=>s[0]=='#'?F(s.slice(1)):s);
+const fm=x=>String(+x.toFixed(6)).replace('.','{,}');
+const num=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+function calc(a,b,op,intro){const out=[],o=op=='×'?'\\times':'\\div';
+ out.push([intro,`${D(a)}${o}${D(b)}`]);
+ const m=[a,b].filter(f=>f.mixed);
+ if(m.length)out.push(['Ubah pecahan campuran menjadi pecahan biasa (satuan × penyebut + pembilang).',...m.map(f=>`${M(f)}=${T(f)}`)]);
+ let x=a,y=b;
+ if(op=='÷'){y={n:b.d,d:b.n};out.push(['Pembagian diubah menjadi perkalian dengan kebalikan pecahan kedua.',`${T1(x)}\\times${T1(y)}`])}
+ const raw={n:x.n*y.n,d:x.d*y.d},r=sim(raw);
+ out.push(['Kalikan pembilang dengan pembilang dan penyebut dengan penyebut.',`${T1(x)}\\times${T1(y)}=\\frac{${x.n}\\times${y.n}}{${x.d}\\times${y.d}}=\\frac{${raw.n}}{${raw.d}}`]);
+ if(r.n!=raw.n||raw.d==1)out.push([raw.d==1?'Tulis hasilnya sebagai bilangan bulat.':'Sederhanakan pecahan.',`\\frac{${raw.n}}{${raw.d}}=${T(r)}`]);
+ if(r.d>1&&r.n>r.d)out.push(['Ubah menjadi pecahan campuran.',`${T(r)}=${M(r)}`]);
+ return{s:out,r}}
+function dec(a,intro){const out=[[intro,D(a)]],v=a.n/a.d;
+ if(a.mixed)out.push(['Ubah ke pecahan biasa.',`${M(a)}=${T(a)}`]);
+ if(a.d<100&&100%a.d==0){const k=100/a.d;out.push([`Jadikan penyebut 100, kalikan atas dan bawah dengan ${k}.`,`${T(a)}=\\frac{${a.n}\\times${k}}{${a.d}\\times${k}}=\\frac{${a.n*k}}{100}`]);out.push(['Tulis sebagai desimal.',`\\frac{${a.n*k}}{100}=${fm(v)}`])}
+ else out.push(['Bagi pembilang dengan penyebut.',`${a.n}\\div${a.d}=${fm(v)}`]);
+ return{s:out}}
+const rat=(a,b,intro)=>{const g=gcd(a,b);return[[intro,`${a}:${b}`],['Cari FPB (faktor persekutuan terbesar) dari kedua bilangan.',`\\text{FPB}(${a},${b})=${g}`],['Bagi kedua bilangan dengan FPB.',`${a}\\div${g}=${a/g},\\quad ${b}\\div${g}=${b/g}`],['Tulis rasio paling sederhana.',`${a/g}:${b/g}`]]};
+const qk=(a,b,op,r)=>[op=='×'?'Ubah campuran ke pecahan biasa, coret silang yang bisa, lalu kalikan.':'Bagi sama dengan kali kebalikan pecahan kedua. Ubah campuran dulu, lalu coret silang.',`$${D(a)}${op=='×'?'\\times':'\\div'}${D(b)}=${M(r)}$`];
+/* gambar HTML/SVG */
+const bar=(a,n)=>{let s='';for(let i=0;i<n;i++)s+=`<rect x="${4+i*(380/n)}" y="4" width="${380/n}" height="40" fill="${i<a?GR:'#fff'}" stroke="#333" stroke-width="2"/>`;return `<svg viewBox="0 0 388 68" role="img" aria-label="${a} dari ${n} bagian diarsir">${s}<text x="4" y="62" font-size="14" fill="#333">Bagian yang diarsir: ${a} dari ${n} bagian sama</text></svg>`};
+const grids=(gs,cap)=>{let s='',x=4;gs.forEach(f=>{for(let r=0;r<10;r++)for(let c=0;c<10;c++)s+=`<rect x="${x+c*14}" y="${4+r*14}" width="14" height="14" fill="${f(r,c)?GR:'#fff'}" stroke="#8a9"/>`;s+=`<rect x="${x}" y="4" width="140" height="140" fill="none" stroke="#333" stroke-width="2"/>`;x+=152});return `<svg viewBox="0 0 ${gs.length*152+4} 166" role="img" aria-label="${cap}">${s}<text x="4" y="161" font-size="12" fill="#333">${cap}</text></svg>`};
+const tb=(h,rows)=>`<div class="tbw"><table class="dt"><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${rows.map(r=>`<tr>${r.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</table></div>`;
+/* bank soal */
+const PG=[
+{t:`Hasil perkalian dari ${F('3/4')} × 20 adalah ...`,o:O('#7','#10','#15','#20'),a:2,m:['3/4','20','×','Pecahan dikali bilangan bulat.']},
+{t:`${'15'} × ${F('2/3')}, maka hasilnya adalah ...`,o:O('#10','#12','#30','#15'),a:0,m:['15','2/3','×','Bilangan bulat dikali pecahan.']},
+{t:`Hasil perkalian 8 × ${F('3/4')} adalah ...`,o:O('#6','#7','#12','#24'),a:0,m:['8','3/4','×','Bilangan bulat dikali pecahan.']},
+{t:'Bagian yang diarsir menunjukkan pecahan ...',g:bar(1,4),o:O('#1/2','#1/3','#1/4','#1/5'),a:2,
+ q:['Hitung semua bagian sama: 4. Bagian diarsir: 1.','Pecahannya $\\frac14$.'],
+ c:()=>[['Hitung banyak seluruh bagian yang sama besar pada gambar.','\\text{seluruh bagian}=4'],['Hitung banyak bagian yang diarsir.','\\text{diarsir}=1'],['Pecahan = bagian diarsir per seluruh bagian.','\\frac{1}{4}']]},
+{t:`Hasil dari ${F('3/3')} × 60 adalah ...`,o:O('#120','#60','#40','#30'),a:1,m:['3/3','60','×','Pecahan dikali bilangan bulat.']},
+{t:`${F('2 2/3')} × 3, jawaban yang benar adalah ...`,o:O('#3','#5','#6','#8'),a:3,m:['2 2/3','3','×','Pecahan campuran dikali bilangan bulat.']},
+{t:`Buatlah soal cerita yang menyatakan bentuk perkalian pecahan 20 × ${F('1/4')}!`,
+ o:[`Reni membutuhkan ${F('1/4')} kg tepung terigu untuk membuat 1 adonan kue brownis. Berapa kg tepung yang dibutuhkan jika Reni akan membuat 20 adonan kue?`,'Reni membutuhkan 4 kg tepung untuk membuat 20 adonan kue.',`Yang dibutuhkan Reni 6 kg tepung terigu karena ${F('1/4')} kg tepung cukup untuk membuat 1 adonan kue brownis.`,'Reni membutuhkan 20 kg untuk membuat adonan kue brownis.'],a:0,
+ q:['$20\\times\\frac14$ berarti 20 kali mengambil $\\frac14$.','Pilihan A: tiap adonan $\\frac14$ kg, ada 20 adonan.'],
+ c:()=>[['Artikan bentuknya. Bilangan 20 menunjukkan banyak kelompok, pecahan $\\frac14$ menunjukkan isi tiap kelompok.','20\\times\\frac14=\\text{20 kelompok, tiap kelompok }\\frac14'],['Cari cerita yang memuat 20 kali pengulangan dengan isi $\\frac14$. Pilihan A: 20 adonan, tiap adonan $\\frac14$ kg.','20\\times\\frac14\\ \\text{kg}'],['Periksa pilihan lain: B, C, dan D memakai 4 kg, 6 kg, 20 kg dan tidak memuat $\\frac14$ untuk tiap adonan.',R`\text{B, C, D tidak sesuai}`],...calc(P('20'),P('1/4'),'×','Hitung hasilnya untuk memeriksa.').s]},
+{t:`Jumlah siswa kelas 6 SDN Suka Maju ada 250 siswa. Sebanyak ${F('1/5')} siswa suka pelajaran matematika. Berapa siswa yang suka pelajaran matematika?`,o:['100 siswa','50 siswa','75 siswa','80 siswa'],a:1,m:['1/5','250','×','Yang suka matematika = 1/5 dari 250 siswa.']},
+{t:`Hasil dari 2 × ${F('4/6')} = ...`,o:[R`$2\times\frac46=\frac46+\frac86=\frac{12}6$`,R`$2\times\frac46=\frac46=\frac46+\frac86$`,R`$2\times\frac46+\frac26+\frac26=\frac46$`,R`$2\times\frac46=\frac23+\frac23=\frac46$`],a:3,
+ note:'Hasil yang benar adalah 8/6 = 4/3. Pilihan D memakai langkah yang benar (4/6 = 2/3, lalu 2/3 + 2/3), tetapi hasil akhirnya tertulis 4/6; kemungkinan salah ketik dan sebaiknya diperbaiki menjadi 4/3.',
+ q:['Perkalian $2\\times$ sama dengan menjumlahkan dua kali.','$\\frac46=\\frac23$, jadi $\\frac23+\\frac23$ (pilihan D).'],
+ c:()=>[['Sederhanakan $\\frac46$ dengan membagi atas dan bawah dengan 2.','\\frac46=\\frac23'],['Perkalian dengan 2 sama dengan penjumlahan berulang dua kali.','2\\times\\frac23=\\frac23+\\frac23'],['Jumlahkan (penyebut sama, pembilang dijumlahkan).','\\frac23+\\frac23=\\frac43'],['Periksa dengan perkalian langsung.','2\\times\\frac46=\\frac86=\\frac43']]},
+{t:`Hasil dari ${F('3/6')} × 90 adalah ...`,o:['4,5','4,6','5,5','6,5'],a:0,m:['3/6','90','×','Pecahan dikali bilangan bulat.'],
+ note:'Hasil perhitungan adalah 45. Pilihan A tertulis 4,5; kemungkinan salah ketik dan sebaiknya diperbaiki menjadi 45. A tetap pilihan yang paling dekat.'},
+{t:'Bagaimana cara membandingkan dua bilangan desimal?',o:['Untuk membandingkan dua bilangan desimal dapat membandingkan dengan cara menggambarkan daerah dari bilangan desimal atau melihat nilai terdapat dari bilangan desimal.','Melihat dari nilai terdapat dari bilangan desimalnya.','Melihat bilangan desimal dari bilangan desimal dengan cara menggambarkan arah daerah dari bilangan desimalnya.','Menggambarkan arah daerah dari bilangan desimal itu sendiri.'],a:0,
+ q:['Dua cara: gambar daerah (kotak 10 × 10) atau bandingkan nilai tempat dari kiri.','Pilihan A memuat kedua cara.'],
+ c:()=>[['Ada dua cara membandingkan desimal. Cara 1: menggambar daerah yang diarsir pada kotak 10 × 10.','0{,}45\\to45\\ \\text{petak},\\quad0{,}5\\to50\\ \\text{petak}'],['Cara 2: samakan angka di belakang koma, lalu bandingkan nilai tempat dari kiri.','0{,}45\\ \\text{dan}\\ 0{,}50\\Rightarrow45<50'],['Hasil perbandingan.','0{,}45<0{,}5'],['Pilihan yang memuat kedua cara adalah A.',R`\text{Jawaban: A}`]]},
+{t:'Mengalikan bilangan asli dengan pecahan berarti menggandakan banyaknya bagian pecahan sebanyak bilangan asli tersebut. Dalam bentuk matematika dituliskan ...',
+ o:[R`$a\times\frac bc=\frac{a\times c}{b}$`,R`$a\times\frac bc=\frac{c\times b}{a}$`,R`$a\times\frac bc=\frac{a\times b}{c}$`,R`$a\times\frac bc=\frac{a\times c}{b}$`],a:2,
+ note:'Pilihan A dan D tertulis sama. Sebaiknya salah satunya diganti agar siswa tidak bingung.',
+ q:['Penyebut tetap. Yang dikalikan hanya pembilang: $a\\times b$.','Jadi $\\frac{a\\times b}{c}$ (pilihan C).'],
+ c:()=>[['Bilangan asli $a$ menunjukkan banyak pengulangan. Pecahan $\\frac bc$ ditambahkan sebanyak $a$ kali.','a\\times\\frac bc=\\underbrace{\\frac bc+\\frac bc+\\dots+\\frac bc}_{a\\ \\text{kali}}'],['Penyebut sama, jadi hanya pembilang yang dijumlahkan.','\\frac{b+b+\\dots+b}{c}=\\frac{a\\times b}{c}'],['Contoh angka untuk memeriksa.','3\\times\\frac25=\\frac{3\\times2}{5}=\\frac65'],['Pilihan yang sesuai adalah C.',R`\text{Jawaban: C}`]]},
+{t:'Bagaimana cara mengurutkan bilangan desimal?',o:['Menentukan mana yang lebih besar dan mana yang lebih kecil.','Terlebih dahulu membandingkan setiap bilangan desimal tersebut, kemudian menentukan mana yang lebih besar dan mana yang lebih kecil.','Melihat urutan dari yang terbesar ke yang terkecil.','Mengurutkan dari yang besar ke yang kecil.'],a:1,
+ q:['Bandingkan dulu semua bilangan, baru urutkan.','Pilihan B menyebutkan kedua langkah itu.'],
+ c:()=>[['Langkah 1: bandingkan setiap bilangan desimal (samakan angka di belakang koma).','0{,}5;\\ 0{,}45;\\ 0{,}6\\to0{,}50;\\ 0{,}45;\\ 0{,}60'],['Langkah 2: tentukan mana yang lebih besar dan lebih kecil.','0{,}60>0{,}50>0{,}45'],['Langkah 3: tulis urutannya.','0{,}45<0{,}5<0{,}6'],['Pilihan yang memuat langkah membandingkan dahulu adalah B.',R`\text{Jawaban: B}`]]},
+{t:`Hasil pembagian dari 9 ÷ ${F('3/4')} adalah ...`,o:O('#8','#9','#10','#12'),a:3,m:['9','3/4','÷','Bilangan bulat dibagi pecahan.']},
+{t:'Gambar di bawah ini menunjukkan bilangan desimal ...',g:grids([()=>1,()=>1,(r,c)=>c<4],'2 kotak penuh dan 4 kolom dari kotak ketiga'),o:['2,2','1,4','2,4','0,25'],a:2,
+ q:['Kotak penuh $=1$ ($100$ petak). Dua kotak penuh $=2$.','Kotak ketiga: 4 dari 10 kolom $=0{,}4$. Jadi $2{,}4$.'],
+ c:()=>[['Satu kotak penuh bernilai 1 (100 petak). Ada 2 kotak penuh.','2\\times1=2'],['Kotak ketiga memiliki 4 kolom dari 10 kolom yang diarsir. Satu kolom = 10 petak, jadi 40 petak dari 100.','\\frac{40}{100}=0{,}4'],['Jumlahkan.','2+0{,}4=2{,}4']]},
+{t:`Hasil dari ${F('24/4')} ÷ 3 adalah ...`,o:O('#5','#4','#3','#2'),a:3,m:['24/4','3','÷','Pecahan dibagi bilangan bulat.']},
+{t:'Pak Andi akan berangkat dari Lampung ke Palembang dan akan menempuh jarak 350 km. Setelah menempuh '+F('2/7')+' perjalanan, Pak Andi beristirahat di Rest Area. Berapa km lagi perjalanan yang harus ditempuh Pak Andi?',o:['150 km','250 km','100 km','175 km'],a:1,
+ q:['Sudah ditempuh: $\\frac27\\times350=100$ km.','Sisa $=350-100=250$ km.'],
+ c:()=>[...calc(P('2/7'),P('350'),'×','Hitung jarak yang sudah ditempuh.').s,['Sisa perjalanan = jarak seluruhnya − jarak yang sudah ditempuh.','350-100=250\\ \\text{km}']]},
+{t:'Dewi mendapat pesanan 100 porsi nasi kotak. Dia sudah menyelesaikan '+F('3/4')+' bagian pesanan tersebut. Berapa porsi nasi yang sudah Dewi selesaikan?',
+ o:[R`$\frac34\times100\text{ porsi}=75\text{ porsi}$`,R`$75\times100=50\text{ porsi}$`,R`$\frac34\times100=\frac{300}{4}$`,R`$\frac34\times100=\frac{12}{100}$`],a:0,
+ q:['$\\frac34\\times100=\\frac{300}{4}=75$ porsi.'],
+ c:()=>[...calc(P('3/4'),P('100'),'×','Yang diselesaikan = 3/4 bagian dari 100 porsi.').s,['Beri satuan.','75\\ \\text{porsi}'],['Pilihan C belum selesai dihitung, B dan D salah hitung. Pilihan yang lengkap dan benar adalah A.',R`\text{Jawaban: A}`]]},
+{t:'Toni membeli 1 lusin kaos kaki seharga Rp120.000 yang berisi 12 kaos kaki. Berapa harga untuk 1 kaos kaki?',o:['Rp12.000','Rp10.000','Rp14.000','Rp8.000'],a:1,
+ q:['Harga satuan = harga total ÷ banyak barang.','$120.000\\div12=10.000$.'],
+ c:()=>[['Harga 1 kaos kaki = harga seluruhnya dibagi banyak kaos kaki.','120.000\\div12'],['Hitung. Bagi 12 ke 12 dulu, lalu nolnya.','12\\div12=1,\\quad\\text{sisa nol: }10.000'],['Periksa dengan perkalian.','10.000\\times12=120.000\\ \\checkmark']]},
+{t:'Rasio yang paling sederhana dari 12 : 16 adalah ...',o:['6 : 8','3 : 4','5 : 8','2 : 8'],a:1,
+ q:['Bagi kedua bilangan dengan 4 (FPB).','$12:16=3:4$.'],c:()=>rat(12,16,'Sederhanakan rasio 12 : 16.')},
+{t:`Bentuk desimal dari ${F('3/4')} adalah ...`,o:['7,5','0,75','0,075','7,50'],a:1,d:['3/4','Ubah pecahan menjadi desimal.']},
+{t:'Gambar di samping menunjukkan bilangan desimal ...',g:grids([(r,c)=>c<2||(c==2&&r<5)],'Kotak 10 × 10 = 100 petak'),o:['0,5','2,5','1,4','0,25'],a:3,
+ q:['Hitung petak diarsir: $20+5=25$ dari 100.','$\\frac{25}{100}=0{,}25$.'],
+ c:()=>[['Hitung petak yang diarsir. Dua kolom penuh, masing-masing 10 petak.','2\\times10=20'],['Kolom ketiga diarsir 5 petak dari atas.','20+5=25\\ \\text{petak}'],['Seluruh petak ada 100, jadi pecahannya per 100.','\\frac{25}{100}'],['Tulis sebagai desimal.','\\frac{25}{100}=0{,}25']]},
+{t:'Perhatikan tabel di bawah ini! Urutkan provinsi dengan suhu terendah ke tertinggi adalah ...',g:tb(['Provinsi','Suhu rata-rata (°C)'],[['Lampung','33,5'],['Sumatera Utara','36,6'],['Jambi','38,2'],['Bengkulu','37,8']]),
+ o:['Lampung, Bengkulu, Sumatera Utara, Jambi','Jambi, Bengkulu, Sumatera Utara, Lampung','Lampung, Sumatera Utara, Bengkulu, Jambi','Lampung, Bengkulu, Jambi, Sumatera Utara'],a:2,
+ q:['Bandingkan angka di depan koma dulu: 33 < 36 < 37 < 38.','Urutan: Lampung, Sumatera Utara, Bengkulu, Jambi.'],
+ c:()=>[['Catat suhu tiap provinsi dari tabel.',R`\text{Lampung }33{,}5;\ \text{Sumut }36{,}6;\ \text{Jambi }38{,}2;\ \text{Bengkulu }37{,}8`],['Bandingkan bagian bulat (di depan koma).','33<36<37<38'],['Urutkan dari suhu terendah ke tertinggi.','33{,}5<36{,}6<37{,}8<38{,}2'],['Ganti dengan nama provinsinya.',R`\text{Lampung}<\text{Sumatera Utara}<\text{Bengkulu}<\text{Jambi}`]]},
+{t:'Rasio atau perbandingan dari 12 : 8 adalah ...',o:['3 : 4','3 : 2','2 : 3','3 : 4'],a:1,note:'Pilihan A dan D tertulis sama (3 : 4). Sebaiknya salah satunya diganti.',
+ q:['Bagi kedua bilangan dengan 4.','$12:8=3:2$.'],c:()=>rat(12,8,'Sederhanakan rasio 12 : 8.')},
+{t:'Rasio yang senilai dengan 10 : 12 adalah 30 : 36 dan dapat juga ...',o:['4 : 6','5 : 6','5 : 7','6 : 7'],a:1,
+ q:['Bagi 10 dan 12 dengan 2: $5:6$.','Cek: $5\\times2=10$ dan $6\\times2=12$.'],
+ c:()=>[['Rasio senilai diperoleh dengan mengalikan atau membagi kedua bilangan dengan bilangan yang sama.','10:12\\times3=30:36'],...rat(10,12,'Sederhanakan 10 : 12 dengan arah sebaliknya.').slice(1),['Periksa: kalikan 5 : 6 dengan 2.','5\\times2=10,\\quad6\\times2=12\\ \\checkmark']]},
+{t:'Rika membeli 1 kotak pena seharga Rp45.000 yang berisi 15 pena. Berapa harga untuk 1 pena?',o:['Rp3.000','Rp4.000','Rp5.000','Rp6.000'],a:0,
+ q:['$45.000\\div15=3.000$.'],
+ c:()=>[['Harga 1 pena = harga kotak dibagi banyak pena.','45.000\\div15'],['Sederhanakan, bagi kedua bilangan dengan 15.','45.000\\div15=3.000'],['Periksa dengan perkalian.','3.000\\times15=45.000\\ \\checkmark']]},
+{t:'Perhatikan tabel berikut untuk soal nomor 27, 28, dan 29. Tanaman obat yang masa panennya paling lama adalah ...',g:tb(['Nama tanaman obat','Masa panen'],[['Kumis kucing','12 minggu'],['Lengkuas','1,5 tahun'],['Jahe merah','3 bulan'],['Kencur','6 bulan'],['Serai merah','3 tahun'],['Kemangi','30 hari']]),
+ o:['Serai merah','Lengkuas','Kencur','Kumis kucing'],a:0,
+ q:['Samakan satuan ke bulan. Serai merah $=3\\times12=36$ bulan, terbesar.'],
+ c:()=>[['Samakan semua masa panen dalam bulan (1 tahun = 12 bulan, 1 bulan = 4 minggu atau 30 hari).',R`\text{Kumis kucing: }12\div4=3\ \text{bulan}`,R`\text{Lengkuas: }1{,}5\times12=18\ \text{bulan}`,R`\text{Jahe merah: }3\ \text{bulan};\ \text{Kencur: }6\ \text{bulan}`,R`\text{Serai merah: }3\times12=36\ \text{bulan}`,R`\text{Kemangi: }30\ \text{hari}=1\ \text{bulan}`],['Bandingkan semuanya.','36>18>6>3\\ge1'],['Yang terbesar adalah serai merah.',R`\text{Jawaban: Serai merah}`]]},
+{t:'Rasio masa panen jahe merah terhadap lengkuas (dalam bulan) adalah ...',o:['3 : 12','1 : 6','3 : 6','1 : 8'],a:1,
+ q:['Jahe merah 3 bulan, lengkuas 18 bulan.','$3:18=1:6$.'],
+ c:()=>[['Ubah ke bulan. Jahe merah 3 bulan. Lengkuas 1,5 tahun.','1{,}5\\times12=18\\ \\text{bulan}'],...rat(3,18,'Rasio jahe merah terhadap lengkuas.')]},
+{t:'Rasio masa panen kencur terhadap serai merah (dalam bulan) adalah ...',o:['6 : 36','3 : 18','1 : 6','Jawaban a, b, c semua benar'],a:3,
+ q:['Kencur 6 bulan, serai merah 36 bulan.','$6:36=3:18=1:6$, jadi semuanya benar.'],
+ c:()=>[['Ubah ke bulan. Kencur 6 bulan. Serai merah 3 tahun.','3\\times12=36\\ \\text{bulan}'],...rat(6,36,'Rasio kencur terhadap serai merah.'),['Periksa pilihan a, b, dan c.','6:36=3:18=1:6'],['Ketiganya senilai, jadi semua benar.',R`\text{Jawaban: D}`]]},
+{t:'Seorang pembalap dapat menempuh jarak 120 km dalam waktu 1 jam. Jarak yang ditempuh dalam waktu 180 menit adalah ...',o:['306 km','360 km','3.600 km','36 km'],a:1,
+ q:['180 menit = 3 jam.','$120\\times3=360$ km.'],
+ c:()=>[['Samakan satuan waktu. 1 jam = 60 menit.','180\\div60=3\\ \\text{jam}'],['Jarak = jarak per jam × banyak jam.','120\\times3'],['Hitung.','120\\times3=360\\ \\text{km}']]}
+];
+/* render */
+const L='ABCD',done={};let sc=0;
+function prep(x){
+ if(x.m){const[a,b,op,i]=x.m,A=P(a),B=P(b),r=calc(A,B,op,i);x.q=qk(A,B,op,r.r);x.s=r.s}
+ else if(x.d){const A=P(x.d[0]);x.s=dec(A,x.d[1]).s;x.q=['Jadikan penyebut 100, atau bagi pembilang dengan penyebut.',`$${D(A)}=${fm(A.n/A.d)}$`]}
+ else x.s=x.c();
+ x.s=[...x.s,['Cocokkan hasil dengan pilihan jawaban.',`\\text{Jawaban: }${L[x.a]}`]]}
+PG.forEach(prep);
+const stp=f=>f.map(s=>`<li>${s[0]}${s.slice(1).map(m=>`$$${m}$$`).join('')}</li>`).join('');
+const card=(q,i)=>`<div class="q" id="p${i}"><h4>Soal ${i+1}</h4><p>${q.t}</p>${q.g?`<div class="fig">${q.g}</div>`:''}
+${q.o.map((s,j)=>`<label class="o"><input type="radio" name="p${i}" value="${j}"><span><b>${L[j]}.</b> ${s}</span></label>`).join('')}<button onclick="chk(${i})">Periksa</button>
+<button class="alt" onclick="tg('c${i}')">Cara cepat</button><button class="alt" onclick="tg('l${i}')">Cara lengkap</button><div class="res" id="rp${i}"></div>
+<div class="pn fast" id="c${i}"><b>Cara cepat</b><ul>${q.q.map(s=>`<li>${s}</li>`).join('')}</ul></div>
+<div class="pn" id="l${i}"><b>Cara lengkap, langkah demi langkah</b>${q.note?`<div class="nt"><b>Catatan guru:</b> ${q.note}</div>`:''}<ol class="st">${stp(q.s)}</ol></div></div>`;
+document.getElementById('pg').innerHTML=PG.map(card).join('');
+document.getElementById('n1').innerHTML=PG.map((q,i)=>`<a href="#p${i}" id="np${i}">${i+1}</a>`).join('');
+function chk(i){const q=PG[i],b=document.getElementById('p'+i),v=b.querySelector('input:checked');
+ b.querySelectorAll('.o').forEach((l,j)=>{l.classList.toggle('ok',j==q.a);l.classList.toggle('no',l.querySelector('input').checked&&j!=q.a)});
+ const ok=v&&+v.value==q.a;document.getElementById('rp'+i).innerHTML=ok?'<span style="color:var(--ok)">Benar. Hebat!</span>':'<span style="color:var(--bad)">Belum tepat. Pelajari cara lengkapnya, lalu coba lagi.</span>';
+ if(ok&&!done[i]){done[i]=1;sc++;document.getElementById('sk').textContent=sc;document.getElementById('np'+i).classList.add('dn')}}
+function tg(id){document.getElementById(id).classList.toggle('show')}
+renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});
+</script></body></html>
