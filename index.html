@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasbor Prediksi UTS Kelas 6</title>
+    <title>Dasbor Kelas 6 - VisualMath.Lim</title>
     <style>
         :root {
-            /* Palet Warna Kustom Baru */
             --navy: #022050;
             --cyan: #00d6d8;
             --yellow: #ffd300;
-            
-            /* Warna Pendukung */
             --text-dark: #1e293b;
-            --text-muted: #475569;
-            --card-bg: #ffffff;
-            --bg-base: #f4f7f9;
+            --bg-gray: #f4f9ff;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-base);
-            /* Latar Belakang Pola Matematika (Inline SVG) */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext x='15' y='25' fill='%23022050' opacity='0.06' font-size='20' font-family='Arial'%3E%CF%80%3C/text%3E%3Ctext x='85' y='45' fill='%23022050' opacity='0.06' font-size='24' font-family='Arial'%3E%C3%97%3C/text%3E%3Ctext x='35' y='85' fill='%23022050' opacity='0.06' font-size='24' font-family='Arial'%3E%C3%B7%3C/text%3E%3Ctext x='95' y='95' fill='%23022050' opacity='0.06' font-size='20' font-family='Arial'%3E%E2%88%9A%3C/text%3E%3Ctext x='55' y='25' fill='%23022050' opacity='0.06' font-size='14' font-family='Arial'%3Ee=mc%C2%B2%3C/text%3E%3Ctext x='5' y='110' fill='%23022050' opacity='0.06' font-size='22' font-family='Arial'%3E%E2%88%9E%3C/text%3E%3Ctext x='65' y='110' fill='%23022050' opacity='0.06' font-size='20' font-family='Arial'%3E%E2%88%91%3C/text%3E%3C/svg%3E");
+            background-color: var(--bg-gray);
+            /* Background SVG dengan elemen matematika ceria yang transparan */
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg font-family='Arial' font-weight='bold'%3E%3Ctext x='15' y='25' font-size='20' fill='%2300d6d8' fill-opacity='0.15'%3E%2B%3C/text%3E%3Ctext x='85' y='45' font-size='24' fill='%23ffd300' fill-opacity='0.2'%3E%3D%3C/text%3E%3Ctext x='45' y='75' font-size='22' fill='%23022050' fill-opacity='0.1'%3E1/2%3C/text%3E%3Ctext x='95' y='95' font-size='24' fill='%2300d6d8' fill-opacity='0.15'%3E%C3%97%3C/text%3E%3Ctext x='10' y='100' font-size='18' fill='%23ffd300' fill-opacity='0.2'%3E%3F%3C/text%3E%3Ctext x='55' y='20' font-size='18' fill='%23022050' fill-opacity='0.1'%3E%C3%B7%3C/text%3E%3C/g%3E%3Cpath d='M30 40h15v15H30z' fill='%2300d6d8' fill-opacity='0.05'/%3E%3Ccircle cx='80' cy='80' r='10' fill='%23ffd300' fill-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
             color: var(--text-dark);
             margin: 0;
             padding: 0;
@@ -30,9 +25,9 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 20px;
         }
 
         .header {
@@ -41,50 +36,83 @@
             background-color: var(--navy);
             color: white;
             border-radius: 15px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 25px rgba(2, 32, 80, 0.3);
-            /* Garis aksen kuning di bawah header */
             border-bottom: 8px solid var(--yellow);
+            margin-bottom: 35px;
+            box-shadow: 0 8px 20px rgba(2, 32, 80, 0.25);
             position: relative;
             overflow: hidden;
         }
 
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 120px;
+            height: 120px;
+            background-color: var(--cyan);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background-color: var(--yellow);
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+
         .logo {
-            max-height: 120px;
+            max-height: 110px;
             max-width: 100%;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             position: relative;
             z-index: 2;
         }
 
         .header h1 { 
             margin: 0; 
-            font-size: 2.4rem; 
-            color: #ffffff;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-size: 2.2rem;
             position: relative;
             z-index: 2;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 0.5px;
         }
         
-        .header p { 
-            margin: 10px 0 0 0; 
-            font-size: 1.2rem; 
-            color: var(--yellow); /* Menggunakan kuning agar mencolok di atas Navy */
+        .bimbel-tag {
+            margin: 5px 0 10px 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--yellow);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .ruang-title {
+            margin: 0;
+            font-size: 1.3rem;
             font-weight: 600;
+            color: var(--cyan);
             position: relative;
             z-index: 2;
         }
 
         .category-section {
-            background: var(--card-bg);
+            background: white;
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            /* Garis aksen cyan di kiri */
-            border-left: 6px solid var(--cyan);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-left: 8px solid var(--cyan);
+            position: relative;
         }
 
         .category-title {
@@ -92,67 +120,74 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border-bottom: 2px solid var(--bg-base);
-            padding-bottom: 15px;
+            border-bottom: 3px dashed var(--cyan);
+            padding-bottom: 12px;
             margin-top: 0;
             margin-bottom: 15px;
             color: var(--navy);
         }
 
         .section-desc {
-            color: var(--text-muted);
+            color: #475569;
             margin-bottom: 25px;
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
         .grid-menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
         .card {
-            background-color: var(--card-bg);
+            background-color: white;
             border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 30px 25px;
+            border-radius: 15px;
+            padding: 30px 20px;
             text-decoration: none;
             color: var(--text-dark);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             display: flex;
             flex-direction: column;
             text-align: center;
-            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Efek Hover dengan Cyan */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: var(--cyan);
+            transition: height 0.3s, background-color 0.3s;
+        }
+
         .card:hover {
             transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 214, 216, 0.15);
             border-color: var(--cyan);
-            box-shadow: 0 12px 25px rgba(0, 214, 216, 0.2);
+        }
+
+        .card:hover::before {
+            height: 10px;
+            background-color: var(--yellow);
         }
 
         .card-icon {
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             margin-bottom: 15px;
-            height: 70px;
-            width: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 214, 216, 0.1);
-            border-radius: 50%;
-            transition: all 0.3s;
+            transition: transform 0.3s;
         }
 
         .card:hover .card-icon {
-            background-color: var(--cyan);
-            color: var(--navy);
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
         }
 
         .card h3 { 
-            margin: 0 0 12px 0; 
+            margin: 0 0 10px 0; 
             font-size: 1.3rem; 
             color: var(--navy); 
         }
@@ -160,64 +195,59 @@
         .card p { 
             margin: 0 0 25px 0; 
             font-size: 0.95rem; 
-            color: var(--text-muted); 
-            flex-grow: 1;
+            color: #64748b; 
         }
 
-        /* Tombol di dalam kartu menggunakan kombinasi warna baru */
-        .btn-card {
+        .btn-mulai {
             background-color: var(--cyan);
             color: var(--navy);
-            padding: 10px 20px;
+            font-weight: bold;
+            padding: 12px 20px;
             border-radius: 8px;
-            font-weight: 700;
-            width: 100%;
-            box-sizing: border-box;
-            transition: all 0.2s;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-top: auto;
         }
 
-        .card:hover .btn-card {
+        .card:hover .btn-mulai {
             background-color: var(--navy);
             color: var(--yellow);
+            box-shadow: 0 4px 10px rgba(2, 32, 80, 0.2);
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Header dengan Logo dan Warna Navy -->
+        <!-- Header dengan Logo -->
         <div class="header">
-            <img src="logo.png" alt="Logo Program" class="logo">
-            <h1>Ruang Belajar Kelas 6</h1>
-            <p>BIMBINGAN BELAJAR - MATH MASTERY</p>
+            <img src="logo.png" alt="Logo VisualMath.Lim" class="logo">
+            <h1>Visualmath.lim</h1>
+            <p class="bimbel-tag">Bimbingan Belajar - Math Mastery</p>
+            <div class="ruang-title">Ruang Belajar Kelas 6</div>
         </div>
 
         <!-- Sesi Utama: Prediksi UTS -->
         <div class="category-section">
-            <h2 class="category-title">
-                <span>🎯</span> Prediksi UTS Matematika 2025/2026
-            </h2>
-            <p class="section-desc">Pilih paket prediksi soal di bawah ini untuk menguji kesiapanmu. Semakin banyak berlatih, semakin mudah ujianmu!</p>
+            <h2 class="category-title">🎯 Prediksi UTS Matematika 2026/2027 semester 1</h2>
+            <p class="section-desc">Halo Kelas 6! Yuk, siapkan dirimu untuk Ujian Tengah Semester. Pilih paket di bawah ini dan kerjakan dengan teliti ya!</p>
             
             <div class="grid-menu">
                 <!-- Tombol Paket 1 -->
                 <a href="paket-1.html" class="card">
-                    <div class="card-icon">📄</div>
+                    <div class="card-icon">🧩</div>
                     <h3>Prediksi UTS - Paket 1</h3>
-                    <p>Uji pemahaman konsep dasar dan operasi hitung matematika.</p>
-                    <div class="btn-card">Mulai Kerjakan</div>
+                    <p>Latihan soal cerita seru dan pemecahan masalah matematika.</p>
+                    <div class="btn-mulai">Mulai Paket 1</div>
                 </a>
                 
                 <!-- Tombol Paket 2 -->
                 <a href="paket-2.html" class="card">
                     <div class="card-icon">🚀</div>
                     <h3>Prediksi UTS - Paket 2</h3>
-                    <p>Pendalaman materi lanjutan dan penyelesaian soal cerita.</p>
-                    <div class="btn-card">Mulai Kerjakan</div>
+                    <p>Latihan soal cerita seru dan pemecahan masalah matematika.</p>
+                    <div class="btn-mulai">Mulai Paket 2</div>
                 </a>
             </div>
         </div>
